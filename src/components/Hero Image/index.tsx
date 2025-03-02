@@ -14,6 +14,7 @@ const HeroImage : FC = () => {
         align-items: center;
         height: 100vh;
         position: relative;
+        overflow-x: hidden;
 
         img {
             max-width: 501px;
@@ -30,6 +31,9 @@ const HeroImage : FC = () => {
             </Header>
             <SlidingContent></SlidingContent>
             <img src={heroImagePhoto} alt="" />
+            <div>
+
+            </div>
         </HeroImage>
     );
 }
