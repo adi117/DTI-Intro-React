@@ -5,6 +5,9 @@ import WorkCard from './components/Work Card';
 import { DummyWorkUrl } from './constants/workcard';
 import Work from './components/Work';
 import SectionGrid from './components/SectionGrid';
+import { DummyTestimonials } from './constants/testimonialcard';
+import Testimonials from './components/Testimonial';
+import TestimonialCard from './components/Testimonial Card';
 
 function App() {
   return (
@@ -14,7 +17,7 @@ function App() {
         <SectionTitle>
           About
         </SectionTitle>
-        <div className='flex-2 text-2xl/8 font-normal text-gray-900 bg-white justify-end pr-20'>
+        <div className='flex-2 text-3xl font-normal text-gray-900 bg-white justify-end pr-20'>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br />
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br />
             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br />
@@ -33,6 +36,20 @@ function App() {
                 <WorkCard key={workcard.title}>
                   <Work {...workcard}/>
                 </WorkCard>
+              ))}
+            </div>
+          </div>
+      </SectionGrid>
+      <SectionGrid>
+        <SectionTitle>
+            Testimonials
+          </SectionTitle>
+          <div className='flex-2 text-2xl/8 font-normal text-gray-900 bg-white justify-end pr-20'>
+            <div className='flex flex-col gap-y-16'>
+              {DummyTestimonials.map((testimonial) => (
+                <TestimonialCard key={testimonial.username}>
+                  <Testimonials {...testimonial}/>
+                </TestimonialCard>
               ))}
             </div>
           </div>
