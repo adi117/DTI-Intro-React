@@ -41,11 +41,20 @@ function App() {
             </div>
           </div>
       </SectionGrid>
-      <div className='w-full overflow-x-auto'>
-        <div className='flex gap-x-10 whitespace-nowrap'>
-          {WorkImageUrl.map((imageurl) => (
-            <CarouselWorkImage key={imageurl.id} {...imageurl} />
-          ))}
+      <div className='flex flex-col gap-10'>
+        <div className='w-full overflow-x-auto no-scrollbar'>
+          <div className='flex gap-10 min-w-max'>
+            {WorkImageUrl.map((imageurl) => (
+                <CarouselWorkImage key={imageurl.id} {...imageurl} />
+              ))}
+          </div>
+        </div>
+        <div className='w-full overflow-x-auto no-scrollbar'>
+          <div className='flex gap-10 min-w-max'>
+            {WorkImageUrl.map((imageurl) => (
+                <CarouselWorkImage key={imageurl.id} {...imageurl} />
+              ))}
+          </div>
         </div>
       </div>
       <SectionGrid>
