@@ -6,7 +6,7 @@ interface GridComponentProps {
 
 const SectionGrid: FC<GridComponentProps> = ({children}) => {
     return (
-        <div className="flex bg-white pt-40">
+        <div className="flex bg-white">
             <div className="flex-1">{children[0]}</div>
             <div className="flex-2">{children[1]}</div>
         </div>
