@@ -1,12 +1,14 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import styled, {keyframes} from "styled-components";
 import "../../global.css";
 import Header from "../Header";
 import heroImagePhoto from "../../assets/Hero-Image-Photo.webp";
 import SlidingContent from "../Sliding Content";
-import "../../heroImage.css";
+import SideMenu from "../Sidemenu";
 
 const HeroImage : FC = () => {
+
+    const [isOpen, setIsOpen] = useState(false);
 
     const wavingHand = keyframes`
             0% { transform: rotate(0deg); }
@@ -44,11 +46,9 @@ const HeroImage : FC = () => {
             border: none;
             padding: 20px 30px;
             border-radius: 50px 0 0 50px;
-            justify-content: end;
-            align-items:end;
         }
 
-        .waving-hand:hover {
+        .wave-hand-button:hover .waving-hand{
             animation: ${wavingHand} 1s ease-in-out infinite;
         }
     `;
@@ -59,9 +59,13 @@ const HeroImage : FC = () => {
             </Header>
             <SlidingContent></SlidingContent>
             <img src={heroImagePhoto} alt=""/>
-            <button className="wave-hand-button">
+            <button 
+            onClick={() => setIsOpen(true)}
+            className="wave-hand-button flex gap-7 justify-center items-center group">
                 <p className="text-6xl waving-hand">👋</p>
+                <p className="text-4xl hidden group-hover:block">Hi I'm Ayush</p>
             </button>
+            <SideMenu isOpen={isOpen} onClose={() => setIsOpen(false)}/>
         </HeroImage>
     );
 }
