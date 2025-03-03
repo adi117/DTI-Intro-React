@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
 import "../../global.css";
+import { Link } from "react-router";
 
 const Header: FC = () => {
   const Header = styled.nav`
@@ -47,9 +48,9 @@ const Header: FC = () => {
       <GridHeader>
         <NameHeader>@Ayush Barnwal</NameHeader>
         <MenuList>
-          <li><a href="">About</a></li>
-          <li><a href="">Work</a></li>
-          <li><a href="">Contact</a></li>
+          <li><Link to="/">About</Link></li>
+          <li><Link to="/">Work</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </MenuList>
       </GridHeader>
     </Header>
