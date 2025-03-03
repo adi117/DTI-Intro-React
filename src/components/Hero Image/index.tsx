@@ -17,8 +17,7 @@ const HeroImage : FC = () => {
             30% { transform: rotate(14deg); }
             40% { transform: rotate(-4.0deg); }
             50% { transform: rotate(10deg); }
-            60% { transform: rotate(0deg); }
-            100% { transform: rotate(14deg); }
+            100% { transform: rotate(0deg); }
         `;
 
     const HeroImage = styled.section `
@@ -49,7 +48,7 @@ const HeroImage : FC = () => {
         }
 
         .wave-hand-button:hover .waving-hand{
-            animation: ${wavingHand} 1s ease-in-out infinite;
+            animation: ${wavingHand} 1s ease-in-out 1;
         }
     `;
 

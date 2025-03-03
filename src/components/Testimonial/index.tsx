@@ -7,7 +7,7 @@ const Testimonials: FC<Testimonial> = ({username, photoProfile, testimonial, rol
     return (
         <div className="flex flex-col gap-7">
             <div>
-                <p className="text-3xl">{testimonial}</p>
+                <p className="text-3xl text-gray-600 font-normal">{testimonial}</p>
             </div>
             <div className="flex gap-3 justify-start items-center">
                 <img className="w-16 rounded-full" src={photoProfile} alt="" />

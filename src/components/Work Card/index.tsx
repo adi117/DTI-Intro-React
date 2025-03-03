@@ -28,7 +28,7 @@ const WorkCard: FC<{children: ReactNode}> = ({children}) => {
                 <div className="text-6xl">
                     {children}
                 </div>
-                <div className="flex text-lg gap-1.5">
+                <div className="flex text-lg gap-1.5 text-gray-600">
                     <p>Brand Design</p>
                     <p>-</p>
                     <p>Webflow Development</p>

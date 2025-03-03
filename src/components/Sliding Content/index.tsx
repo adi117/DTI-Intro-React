@@ -1,8 +1,13 @@
 import { FC } from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import "../../global.css";
 
 const SlidingContent: FC = () => {
+
+    const runningText = keyframes`
+            from { transform: translate(100%); }
+            to { transform: translate(-100%); }
+        `;
 
     const Slider = styled.div `
         
@@ -22,6 +27,7 @@ const SlidingContent: FC = () => {
             overflow: hidden;
             position: absolute;
             bottom: 98px;
+            animation: ${runningText} 20s linear infinite;
         }
     `;
 

@@ -17,3 +17,9 @@ body,
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.about-description {
+  width: 840px;
+  line-clamp: 5;
+  font-size: 27px;
+}
