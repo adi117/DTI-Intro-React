@@ -8,7 +8,7 @@ interface SideMenuProps{
 
 const SideMenu : FC<SideMenuProps> = ({isOpen, onClose}) => {
     return (
-        <div>
+        <div className="z-50">
             <div 
                 className={`fixed inset-0 bg-gray-950 transition-opacity ${isOpen ? "opacity-40 visible z-10" : "opacity-0 invisible z-10"}`} 
                 onClick={onClose} 
@@ -19,7 +19,7 @@ const SideMenu : FC<SideMenuProps> = ({isOpen, onClose}) => {
                     onClick={onClose} 
                     className="absolute top-0 right-0"
                 >
-                    <img src={CloseIcon} alt="" className="w-20 top-14 right-14 p-3 bg-white rounded-full"/>
+                    <img src={CloseIcon} alt="" className="fixed w-20 top-14 right-14 p-3 bg-white rounded-full"/>
                 </button>
 
                 <ul className="text-6xl text-white font-medium flex flex-col gap-7">
