@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import About from './routes/About'
 import Contact from './routes/Contact'
+import Request from './routes/Request'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 
 const router = createBrowserRouter ([
@@ -13,6 +14,10 @@ const router = createBrowserRouter ([
   {
     path: "/contact",
     element: <Contact />
+  },
+  {
+    path: "/request",
+    element: <Request />
   }
 ]);
 

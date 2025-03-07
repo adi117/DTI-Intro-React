@@ -2,7 +2,6 @@ import { FC } from 'react';
 import InputMenu from '../Input Menu';
 import { Formik, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
-import ContactList from '../../Contact List';
 import useContactMessage from '../../hook/useContactMessage';
 
 interface FormProps {
@@ -63,7 +62,6 @@ const Form: FC = () => {
                     </form>
                 )}
             </Formik>
-                <ContactList></ContactList>
         </div>
     );
 }
