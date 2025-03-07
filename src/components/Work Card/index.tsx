@@ -1,26 +1,11 @@
-import {FC, ReactNode, useState} from "react";
+import { FC, ReactNode, useState } from "react";
 import arrowIcon from "../../assets/arrow_forward.svg";
 import arrowIconHover from "../../assets/arrow_forward_hover.svg";
-import styled from "styled-components";
 
 
-const WorkCard: FC<{children: ReactNode}> = ({children}) => {
+const WorkCard: FC<{ children: ReactNode }> = ({ children }) => {
 
     const [over, setOver] = useState(false);
-
-    const ArrowButton = styled.button `
-        padding: 20px;
-        border-radius: 50%;
-        border: 1px solid rgba(60, 61, 62, 1);
-        height: 85px;
-        width: 85px;
-        background-color: white;
-
-        &:hover {
-            background-color: rgba(60, 61, 62, 1);
-            border: none;
-        }
-    `;
 
     return (
         <div className="flex justify-between pb-8 w-full">
@@ -36,13 +21,14 @@ const WorkCard: FC<{children: ReactNode}> = ({children}) => {
                     <p>Web Design</p>
                 </div>
             </div>
-            <ArrowButton
+            <div
+                className="p-5 rounded-full border-[1px] border-solid border-[#3c3d3e] h-[85px] w-[85px] bg-white hover:bg-[#3c3d3e] hover:border-none"
                 onMouseOver={() => setOver(true)}
                 onMouseOut={() => setOver(false)}
             >
-                <img src={over ? arrowIconHover : arrowIcon} alt="" 
+                <img src={over ? arrowIconHover : arrowIcon} alt=""
                 />
-            </ArrowButton>
+            </div>
         </div>
     );
 };

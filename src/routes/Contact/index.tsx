@@ -1,6 +1,7 @@
 import { FC } from "react"
 import "../../App.css"
 import Header from "../../components/Header";
+import Form from "../../components/Form";
 
 const Contact: FC = () => {
     return (
@@ -34,30 +35,7 @@ const Contact: FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-1/2 text-gray-950 gap-10 flex flex-col">
-                    <h1 className=" text-6xl font-medium">Let’s build something cool together</h1>
-                    <form action="" className="flex flex-col gap-8">
-                        <div className="flex flex-col gap-3 pb-3 border-b">
-                            <p className="text-lg font-normal">Name</p>
-                            <input type="text" className="border-none appearance-none focus:outline-none text-2xl" placeholder="James Robert" />
-                        </div>
-                        <div className="flex flex-col gap-3 pb-3 border-b">
-                            <p className="text-lg font-normal">Email</p>
-                            <input type="text" className="border-none appearance-none focus:outline-none text-2xl" placeholder="ayush.barnwal@brightscout.com" />
-                        </div>
-                        <div className="flex flex-col gap-3 pb-3 border-b">
-                            <p className="text-lg font-normal">Subject</p>
-                            <input type="text" className="border-none appearance-none focus:outline-none text-2xl" placeholder="For web design work Enquire" />
-                        </div>
-                        <div className="flex flex-col gap-3 pb-3 border-b">
-                            <p className="text-lg font-normal">Message</p>
-                            <div className="h-40">
-                                <textarea className="border-none appearance-none focus:outline-none text-2xl w-full h-full no-scrollbar" placeholder="Type your Message" />
-                            </div>
-                        </div>
-                  <button className='rounded-full px-16 py-6 !bg-gray-950 !text-white !text-lg w-fit h-fit'>Submit</button>
-                    </form>
-                </div>
+                <Form></Form>
             </div>
 
             <footer className='flex flex-col bg-black p-20 pb-0 gap-36 mt-32'>
