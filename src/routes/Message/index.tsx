@@ -2,7 +2,7 @@ import { FC } from "react";
 import useContactMessage from "../../hook/useContactMessage";
 import Header from "../../components/Header";
 
-const ContactList: FC = () => {
+const Message: FC = () => {
 
     const { contactList } = useContactMessage();
 
@@ -35,4 +35,4 @@ const ContactList: FC = () => {
     );
 }
 
-export default ContactList;
+export default Message;

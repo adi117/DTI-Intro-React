@@ -12,7 +12,7 @@ const Header: FC = () => {
           <li><Link to="/">About</Link></li>
           <li><Link to="/">Work</Link></li>
           <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/request">Request</Link></li>
+          <li><Link to="/message">Message</Link></li>
         </ul>
       </div>
     </nav>
